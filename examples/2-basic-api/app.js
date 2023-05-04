@@ -2,7 +2,7 @@ const result = document.querySelector('.result')
 
 const fetchData = async() => {
     try {
-        const {data} = await axios("http://localhost:8888/api/2-basic-api")
+        const {data} = await axios.get("http://localhost:8888/api/2-basic-api")
         const products = data.map((product)=> {
             const {image:{url},price, name } = product;
             return `<article class="product">
